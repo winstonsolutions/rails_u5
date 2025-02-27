@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get '/products', to: 'products#index'
+  get "/products", to: "products#index"
 
-  resources :products, only: [:index, :show] # This automatically generates product_path
+  resources :products, only: [ :index, :show ] # This automatically generates product_path
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
