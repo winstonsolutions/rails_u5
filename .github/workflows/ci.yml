@@ -13,6 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set execute permissions for brakeman
+        run: chmod +x bin/brakeman
+
       - name: Run Brakeman
         run: bin/brakeman --no-pager || true
 
